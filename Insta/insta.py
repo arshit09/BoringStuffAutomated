@@ -8,8 +8,10 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 time.sleep(2)
 
+pyperclip.copy(
+    'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
 
-countDM = 1
+countDM = 10
 count = 0
 time.sleep(1)
 pyautogui.click(827, 1007, duration=1)
@@ -44,21 +46,26 @@ while (count < countDM):
         r'D:\InstadetectMessage.png', lang='eng')
     if(stringFromSS.find('Message') != -1):
         print("Found")
+        count = count+1
         # click on "SEND MESSAGE" option
         pyautogui.click(784, 949, duration=1)
         time.sleep(1)
         # click on TEXT BOX
         pyautogui.click(890, 994, duration=1)
-        typethis = "It seems you like minimalism. Checkout @be.kriative for creativity with minimalism."
-        lengthofTS = len(typethis)
-        countTS = 0
-        limit = lengthofTS
-        while(countTS < lengthofTS):
-            pyautogui.hotkey(typethis[countTS])
-            countTS = countTS + 1
+        pyperclip.copy(
+            'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
+        pyautogui.hotkey('ctrl', 'v')
+        # typethis = "It seems you like minimalism. Checkout @be.kriative for creativity with minimalism."
+        # lengthofTS = len(typethis)
+        # countTS = 0
+        # limit = lengthofTS
+        # while(countTS < lengthofTS):
+        #     pyautogui.hotkey(typethis[countTS])
+        #     countTS = countTS + 1
         pyautogui.click(1176, 671, duration=1)
     pyautogui.click(680, 88, duration=1)
     pyautogui.click(680, 88, duration=1)
     pyautogui.moveTo(800, 243, duration=1)
-    pyautogui.dragRel(0, -72, duration=1)
-    count = count+1
+    # -6 drag added
+    pyautogui.dragRel(0, -78, duration=1)
+    # count = count+1
