@@ -13,6 +13,7 @@ pyperclip.copy(
 
 countDM = 10
 count = 0
+flag = 0
 time.sleep(1)
 pyautogui.click(827, 1007, duration=1)
 pyautogui.click(891, 90, duration=1)
@@ -45,6 +46,7 @@ while (count < countDM):
     stringFromSS = pytesseract.image_to_string(
         r'D:\InstadetectMessage.png', lang='eng')
     if(stringFromSS.find('Message') != -1):
+        flag = 1
         print("Found")
         count = count+1
         # click on "SEND MESSAGE" option
@@ -52,8 +54,6 @@ while (count < countDM):
         time.sleep(1)
         # click on TEXT BOX
         pyautogui.click(890, 994, duration=1)
-        pyperclip.copy(
-            'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
         pyautogui.hotkey('ctrl', 'v')
         # typethis = "It seems you like minimalism. Checkout @be.kriative for creativity with minimalism."
         # lengthofTS = len(typethis)
@@ -65,7 +65,10 @@ while (count < countDM):
         pyautogui.click(1176, 671, duration=1)
     pyautogui.click(680, 88, duration=1)
     pyautogui.click(680, 88, duration=1)
+    if (flag == 1):
+        pyautogui.click(1145, 243, duration=1)
     pyautogui.moveTo(800, 243, duration=1)
     # -6 drag added
     pyautogui.dragRel(0, -78, duration=1)
     # count = count+1
+    flag = 0
