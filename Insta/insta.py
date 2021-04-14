@@ -8,10 +8,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 time.sleep(2)
 
-pyperclip.copy(
-    'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
-
-countDM = 10
+countDM = 1
 count = 0
 flag = 0
 time.sleep(1)
@@ -19,7 +16,7 @@ pyautogui.click(827, 1007, duration=1)
 pyautogui.click(891, 90, duration=1)
 time.sleep(1)
 
-typethis = "theminimalist_india"
+typethis = "kunvector"
 lengthofTS = len(typethis)
 countTS = 0
 limit = lengthofTS
@@ -47,13 +44,15 @@ while (count < countDM):
         r'D:\InstadetectMessage.png', lang='eng')
     if(stringFromSS.find('Message') != -1):
         flag = 1
-        print("Found")
+        # print("Found")
         count = count+1
         # click on "SEND MESSAGE" option
         pyautogui.click(784, 949, duration=1)
         time.sleep(1)
         # click on TEXT BOX
         pyautogui.click(890, 994, duration=1)
+        pyperclip.copy(
+        'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
         pyautogui.hotkey('ctrl', 'v')
         # typethis = "It seems you like minimalism. Checkout @be.kriative for creativity with minimalism."
         # lengthofTS = len(typethis)
