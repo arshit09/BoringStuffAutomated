@@ -8,7 +8,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 time.sleep(2)
 
-countDM = 1
+countDM = 15
 count = 0
 flag = 0
 time.sleep(1)
@@ -16,7 +16,7 @@ pyautogui.click(827, 1007, duration=1)
 pyautogui.click(891, 90, duration=1)
 time.sleep(1)
 
-typethis = "kunvector"
+typethis = "theminimalist_india"
 lengthofTS = len(typethis)
 countTS = 0
 limit = lengthofTS
@@ -30,10 +30,10 @@ pyautogui.click(991, 169, duration=1)
 time.sleep(1)
 
 while (count < countDM):
-    # follower list > first user
+    # follower list -> first user
     pyautogui.click(800, 243, duration=1)
     time.sleep(1.5)
-    # click on RIGHT TOP optins
+    # click on RIGHT TOP options
     pyautogui.click(1187, 91, duration=1)
     time.sleep(1)
     image = pyautogui.screenshot(region=(666, 931, 207, 35))
@@ -50,18 +50,11 @@ while (count < countDM):
         pyautogui.click(784, 949, duration=1)
         time.sleep(1)
         # click on TEXT BOX
-        pyautogui.click(890, 994, duration=1)
+        # pyautogui.click(890, 994, duration=1)
         pyperclip.copy(
         'It seems you like minimalism. Checkout @be.kriative for creativity with minimalism.')
         pyautogui.hotkey('ctrl', 'v')
-        # typethis = "It seems you like minimalism. Checkout @be.kriative for creativity with minimalism."
-        # lengthofTS = len(typethis)
-        # countTS = 0
-        # limit = lengthofTS
-        # while(countTS < lengthofTS):
-        #     pyautogui.hotkey(typethis[countTS])
-        #     countTS = countTS + 1
-        pyautogui.click(1176, 671, duration=1)
+        pyautogui.click(1175, 992, duration=1)
     pyautogui.click(680, 88, duration=1)
     pyautogui.click(680, 88, duration=1)
     if (flag == 1):
@@ -69,5 +62,4 @@ while (count < countDM):
     pyautogui.moveTo(800, 243, duration=1)
     # -6 drag added
     pyautogui.dragRel(0, -78, duration=1)
-    # count = count+1
     flag = 0
