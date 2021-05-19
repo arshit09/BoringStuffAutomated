@@ -1,13 +1,14 @@
-from pynput.keyboard import Listener
+from pynput.keyboard import Key, Listener
 import pyautogui
 import time
 
 
 def on_press(key):
-    pyautogui.click(539, 979)
-    time.sleep(0.5)
-    pyautogui.click(630, 692)
-    pyautogui.click(1461, 776)
+    if key == Key.esc:
+        pyautogui.click(539, 979)
+        time.sleep(0.5)
+        pyautogui.click(630, 692)
+        pyautogui.click(1461, 776)
 
 
 # Create an instance of Listener
