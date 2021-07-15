@@ -1,10 +1,11 @@
 import pyautogui
 import time
 
-countDM = 15
+countDM = 8
 count = 0
-time.sleep(0)
+time.sleep(2)
 while (count < countDM):
+    time.sleep(0.5)
     pyautogui.click(529, 115)
     time.sleep(0.5)
     pyautogui.hotkey('ctrl', 'v')

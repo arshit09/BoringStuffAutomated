@@ -8,7 +8,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 time.sleep(2)
 
-countDM = 15
+countDM = 20
 count = 0
 flag = 0
 time.sleep(1)
@@ -16,13 +16,13 @@ pyautogui.click(827, 1007, duration=1)
 pyautogui.click(891, 90, duration=1)
 time.sleep(1)
 
-typethis = "theminimalist_india"
+typethis = "theminimalist"
 lengthofTS = len(typethis)
 countTS = 0
-limit = lengthofTS
+# limit = lengthofTS
 while(countTS < lengthofTS):
     pyautogui.hotkey(typethis[countTS])
-    countTS = countTS + 1
+    countTS += 1
 
 pyautogui.click(820, 178, duration=1)
 time.sleep(2)
