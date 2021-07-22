@@ -1,7 +1,7 @@
 import pyautogui
 import time
 
-countDM = 8
+countDM = 7
 count = 0
 time.sleep(2)
 while (count < countDM):
