@@ -1,3 +1,9 @@
+""""
+Software: Bluestacks 5 Beta 
+Display resolution: 1920*1080
+Scale: 125%
+"""
+
 import pyautogui
 import time
 import pyperclip
