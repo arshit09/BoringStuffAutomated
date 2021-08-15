@@ -9,8 +9,8 @@ import pyautogui
 import time
 import pyperclip
 
-account = "chaibuoy"
-NumberofDM = 7
+account = "theminimalist_india"
+NumberofDM = 20
 
 # search for search-icon
 SearchIcon = pyautogui.locateOnScreen('Images/SearchIcon.png', confidence=0.8)

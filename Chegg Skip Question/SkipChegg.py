@@ -3,7 +3,7 @@ import pyautogui
 import time
 
 def on_press(key):
-    if key == Key.esc:
+    if key == Key.insert:
         pyautogui.click(539, 979)
         time.sleep(0.75)
         pyautogui.click(630, 692)
