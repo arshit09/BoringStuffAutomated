@@ -8,6 +8,7 @@ from time import time
 import pyautogui
 import time
 import pyperclip
+import easygui
 
 account = "theminimalist_india"
 NumberofDM = 20
@@ -82,3 +83,7 @@ while count < NumberofDM:
     
     screenCheck = 1
     count += 1
+
+title = "Insta Messenger"
+msg = str(NumberofDM) + ' messages sent to the followers of "' + account +'"'
+easygui.msgbox(msg, title)
