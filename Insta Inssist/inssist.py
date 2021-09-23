@@ -57,7 +57,7 @@ while count < NumberofDM:
     # click on DM icon
     pyautogui.click(pyautogui.center(DMIcon), duration=0.5)
 
-    time.sleep(5)
+    time.sleep(4)
 
     Message = open('Message.txt', 'r').read()
     pyperclip.copy(Message)
