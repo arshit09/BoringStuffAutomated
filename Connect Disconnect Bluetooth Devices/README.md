@@ -1,4 +1,4 @@
-### Getting started
+### Getting Started
 
 1. Download this tool:
 [https://bluetoothinstaller.com/bluetooth-command-line-tools](https://bluetoothinstaller.com/bluetooth-command-line-tools "https://bluetoothinstaller.com/bluetooth-command-line-tools")
@@ -10,5 +10,3 @@
 4. Copy the MAC address of the Bluetooth device you want to connect/disconnect.
 
 5. Now replace `MAC` word mentioned in both batch files (i.e. connect.bat and disconnect.bat) with the address you copied.
-
-**Done!**🎉

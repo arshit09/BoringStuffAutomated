@@ -1,4 +1,4 @@
-### Find PNGs across these websites
+### Find PNGs Across These Websites
 - FAVPNG
 - CleanPNG
 - StickPNG

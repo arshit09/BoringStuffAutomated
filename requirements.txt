@@ -1,0 +1,7 @@
+opencv-python
+easygui
+numpy
+PyAutoGUI
+pynput
+pyperclip
+pytesseract
