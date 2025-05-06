@@ -2,7 +2,10 @@ import cv2
 import numpy as np
 import os
 
-def overlay_image_on_white_bg(image_path, output_path):
+# Background color in BGR format (Gray: 128, 128, 128)
+BACKGROUND_COLOR = (128, 128, 128)
+
+def overlay_image_on_bg(image_path, output_path):
     # Load the image
     img = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
     
@@ -13,9 +16,10 @@ def overlay_image_on_white_bg(image_path, output_path):
     # Get image dimensions
     img_height, img_width = img.shape[:2]
     
-    # Create a white background (1080x1920)
+    # Create a background (1080x1920) with specified color
     bg_height, bg_width = 1920, 1080
-    white_bg = np.ones((bg_height, bg_width, 3), dtype=np.uint8) * 255
+    bg = np.zeros((bg_height, bg_width, 3), dtype=np.uint8)
+    bg[:] = BACKGROUND_COLOR  # Set the background color
     
     # Resize if image is too large
     if img_height > bg_height or img_width > bg_width:
@@ -28,11 +32,11 @@ def overlay_image_on_white_bg(image_path, output_path):
     x_offset = (bg_width - img_width) // 2
     y_offset = (bg_height - img_height) // 2
     
-    # Overlay image onto white background
-    white_bg[y_offset:y_offset + img_height, x_offset:x_offset + img_width] = img
+    # Overlay image onto background
+    bg[y_offset:y_offset + img_height, x_offset:x_offset + img_width] = img
     
     # Save the output
-    cv2.imwrite(output_path, white_bg)
+    cv2.imwrite(output_path, bg)
     print(f"Saved: {output_path}")
 
 def process_all_images(input_folder="input", output_folder="output"):
@@ -44,7 +48,7 @@ def process_all_images(input_folder="input", output_folder="output"):
         if filename.lower().endswith(supported_extensions):
             input_path = os.path.join(input_folder, filename)
             output_path = os.path.join(output_folder, filename)
-            overlay_image_on_white_bg(input_path, output_path)
+            overlay_image_on_bg(input_path, output_path)
 
 # Run the batch processor
 process_all_images()
